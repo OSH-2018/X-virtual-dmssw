@@ -1,7 +1,11 @@
 #!/bin/bash
 echo "Hello Linux"
-echo -n >output.txt
-while read content
+
+echo  -n >  output.txt  # cat /dev/null > output.txt
+while read -r line
 do
-	echo   $content >> output.txt
+	echo $line >> output.txt
 done
+
+#a simpler solution
+#cat   > output.txt
